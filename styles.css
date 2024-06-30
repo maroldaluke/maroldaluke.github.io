@@ -1,0 +1,149 @@
+/* General styles */
+body {
+    font-family: 'Ubuntu';
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    background-color: rgba(70, 70, 70, 0.9);
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Hero section styles */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('resources/wow_jupiter.png') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding-top: 4rem;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-text h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.intro-text ul {
+    text-align: left;
+    list-style: disc inside;
+    padding: 0;
+    margin: 0;
+}
+
+.intro-text ul li {
+    margin: 0.5rem 0;
+}
+
+.intro-image {
+    margin-top: 2rem; /* Add some space between the text and the image */
+}
+
+.intro-image img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 3s ease-in-out;
+}
+
+.hero-content {
+    margin-top: -6rem; /* Move the text up */
+}
+
+/* Content section styles */
+.content {
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Footer styles */
+footer {
+    background-color: rgba(70, 70, 70, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
