@@ -51,11 +51,12 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Ensure it takes full height */
     background: url('resources/wow_jupiter.png') no-repeat center center/cover;
+    background-size: cover;
     color: #fff;
     text-align: center;
-    padding-top: 1.5rem;
+    padding-top: 1.5rem; /* Reduced padding to move content higher */
     position: relative;
 }
 
@@ -97,6 +98,7 @@ nav ul li a:hover {
 .intro-text ul li {
     margin: 0.5rem 0;
     text-align: center;
+    font-size: 1.2rem; /* Adjust font size for desktop */
 }
 
 .intro-image {
@@ -108,7 +110,7 @@ nav ul li a:hover {
     max-width: 200px;
     height: auto;
     border-radius: 50%;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: fadeIn 3s ease-in-out;
 }
@@ -156,6 +158,12 @@ footer {
         font-size: 2rem;
     }
     .intro-text ul li {
+        font-size: 1rem;
+    }
+    .content h1 {
+        font-size: 2rem;
+    }
+    .content p {
         font-size: 1rem;
     }
 }
