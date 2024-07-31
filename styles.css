@@ -1,6 +1,6 @@
 /* General styles */
 body {
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -48,13 +48,14 @@ nav ul li a:hover {
 /* Hero section styles */
 .hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background: url('resources/wow_jupiter.png') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    padding-top: 4rem;
+    padding-top: 1.5rem;
     position: relative;
 }
 
@@ -81,24 +82,25 @@ nav ul li a:hover {
 }
 
 .intro-text h1 {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 .intro-text ul {
     text-align: left;
-    list-style: disc inside;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .intro-text ul li {
     margin: 0.5rem 0;
+    text-align: center;
 }
 
 .intro-image {
-    margin-top: 2rem; /* Add some space between the text and the image */
+    margin-top: 2rem;
 }
 
 .intro-image img {
@@ -109,10 +111,6 @@ nav ul li a:hover {
     border: 1px solid #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: fadeIn 3s ease-in-out;
-}
-
-.hero-content {
-    margin-top: -6rem; /* Move the text up */
 }
 
 /* Content section styles */
@@ -146,4 +144,18 @@ footer {
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(-20px); }
     100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 2rem;
+        height: auto;
+    }
+    .intro-text h1 {
+        font-size: 2rem;
+    }
+    .intro-text ul li {
+        font-size: 1rem;
+    }
 }
