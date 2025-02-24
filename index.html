@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luke's Personal Website</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -13,31 +13,47 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="notes.html">Notes</a></li>
+                <li><a href="videos.html">Videos</a></li>
                 <li><a href="book.html">Book</a></li>
                 <li><a href="resume.html">Resume</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <div class="intro-text">
-                    <h1>Hi, I'm Luke 😁</h1>
-                    <ul>
-                        <li>Equity derivatives trader at Morgan Stanley 📈</li>
-                        <li>Graduated from Carnegie Mellon University in Spring 2024 📚</li>
-                        <li>Electrical & Computer Engineering and Computational Finance 🖥️</li>
-                        <li>Soccer Player ⚽</li>
-                    </ul>
+        <h1>Hi, I'm Luke 😁</h1>
+        <ul>
+            <li>Equity derivatives trader at Morgan Stanley 📈</li>
+            <li>Graduated from Carnegie Mellon University in Spring 2024 📚</li>
+            <li>Studied Electrical & Computer Engineering and Computational Finance 🖥️</li>
+        </ul>
+        <section class="gallery">
+            <div class="carousel-container" data-carousel="carousel1">
+                <div class="carousel" id="carousel1">
+                    <img src="images/jupiter.png" alt="Image 1">
+                    <img src="images/grad2.jpg" alt="Image 2">
+                    <img src="images/soccer1.jpg" alt="Image 3">
+                    <img src="images/friends1.jpg" alt="Image 4">
+                    <img src="images/city.JPG" alt="Image 5">
                 </div>
-                <div class="intro-image">
-                    <img src="resources/headshot.jpg" alt="Me">
-                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
             </div>
-        </section>
+            <div class="carousel-container" data-carousel="carousel2">
+                <div class="carousel" id="carousel2">
+                    <img src="images/headshot.jpg" alt="Image 6">
+                    <img src="images/headshot2.jpg" alt="Image 7">
+                    <img src="images/ski2.jpg" alt="Image 8">
+                    <img src="images/grad1.jpg" alt="Image 9">
+                    <img src="images/soccer4.JPG" alt="Image 10">
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+        </section>        
     </main>
     <footer>
-        <p>&copy; 2024 Luke Marolda</p>
+        <p>&copy; 2025 Luke Marolda</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>

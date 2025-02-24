@@ -5,61 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Ubuntu';
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .directory-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .folder {
-            list-style-type: none;
-            padding-left: 0;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #eee;
-        }
-        .folder > a {
-            display: block;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #333;
-            text-decoration: none;
-            padding: 1rem;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .folder > a:hover {
-            background-color: #f0f0f0;
-            color: #ff6347;
-        }
-        .folder ul {
-            list-style-type: none;
-            padding-left: 1rem;
-            display: none;
-        }
-        .folder ul li {
-            margin-bottom: 0.5rem;
-        }
-        .folder ul li a {
-            display: block;
-            padding: 0.5rem 1rem;
-            color: #666;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .folder ul li a:hover {
-            background-color: #f0f0f0;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -67,55 +13,32 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="notes.html">Notes</a></li>
+                <li><a href="videos.html">Videos</a></li>
                 <li><a href="book.html">Book</a></li>
                 <li><a href="resume.html">Resume</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="content">
-            <div class="directory-container">
-                <h1 style="text-align: center;">Some Notes</h1>
-                <ul class="folder">
-                    <li class="folder">
-                        <a href="#">Folder 1</a>
-                        <ul>
-                            <li><a href="#">Note 1</a></li>
-                            <li><a href="#">Note 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="folder">
-                        <a href="#">Folder 2</a>
-                        <ul>
-                            <li class="folder"><a href="#">Subfolder 1</a>
-                                <ul>
-                                    <li><a href="#">Note 3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Note 4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="notes/sample_note.pdf">Fixed Income</a></li>
+    <main class="notes">
+        <h1>Notes</h1>
+        <p>Browse my notes below:</p>
+        <ul class="folder-list">
+            <li class="folder">📁 Math
+                <ul class="file-list">
+                    <li><a href="notes/sample_ctf.pdf" download>📄 Continuous Time Finance - Lecture Notes</a></li>
+                    <li><a href="notes/sample_fixedincome.pdf" download>📄 Fixed Income - Lecture Notes</a></li>
                 </ul>
-            </div>
-        </section>
+            </li>
+            <li class="folder">📁 Computer Systems
+                <ul class="file-list">
+                    <li><a href="notes/sample_dbs.pdf" download>📄 Database Systems - Lecture Notes 1</a></li>
+                </ul>
+            </li>
+        </ul>
     </main>
     <footer>
-        <p>&copy; 2024 Luke Marolda</p>
+        <p>&copy; 2025 Luke Marolda</p>
     </footer>
-
-    <!-- JavaScript for folder toggling -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var folders = document.querySelectorAll('.folder > a');
-            folders.forEach(function(folder) {
-                folder.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var subfolder = this.nextElementSibling;
-                    subfolder.style.display = subfolder.style.display === 'block' ? 'none' : 'block';
-                });
-            });
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
