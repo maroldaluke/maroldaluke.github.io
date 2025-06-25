@@ -143,14 +143,15 @@ a:hover {
 
 /* Make sure each carousel container has a fixed size */
 .carousel-container {
-    width: 500px;  /* Adjust as needed */
-    height: 300px; /* Adjust as needed */
+    width: 100%;
+    max-width: 500px;   /* This keeps it from getting too big on large screens */
+    height: auto;       /* Let it adjust height dynamically if needed */
+    aspect-ratio: 4 / 3;  /* Keeps a nice proportion */
     overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ddd; /* Optional: just for visibility */
 }
 
 /* Ensure images fit correctly inside each carousel */
